@@ -1,0 +1,13 @@
+<!--base.htmlからの拡張ファイルであることの宣言-->
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+    {{form.title}} <!--formの中身をpタグで区切るようになる-->
+    {{form.memo}} <!--formの中身をpタグで区切るようになる-->
+    {{form.priority}} <!--formの中身をpタグで区切るようになる-->
+    {{form.duedate}} <!--formの中身をpタグで区切るようになる-->
+    <input type="submit" value="更新します">
+</form>
+
+{% endblock content %}

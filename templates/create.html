@@ -1,0 +1,13 @@
+<!--base.htmlからの拡張ファイルであることの宣言-->
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+    {{form.as_p}} <!--formの中身をpタグで区切るようになる-->
+    <input type="submit" value="作成する">
+
+</form>
+
+{% endblock content %}
+
+

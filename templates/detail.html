@@ -1,0 +1,24 @@
+<!--base.htmlからの拡張ファイルであることの宣言-->
+{% extends 'base.html' %}
+
+<!--base.htmlには枠組みのみ宣言し、ここで具体的な設定をする-->
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">詳細画面</h1>
+      <p class="lead">Todoの詳細です</p>
+    </div>
+  </div>
+{% endblock header %}
+
+{% block content %}
+<div class='container'>
+    <div class="alert alert-success" role="alert">
+        <p>タイトル：{{ object.title}}</p>
+        <p>中身：{{ object.memo}}</p>
+        <p>優先度：{{ object.priority}}</p>
+        <p>期日：{{ object.duedate}}</p>
+      </div>
+
+</div>
+{% endblock content%}
